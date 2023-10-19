@@ -47,14 +47,18 @@ struct YourDependencyMock: YourDependencyProvider {
         // Do mock stuff
     }
 }
+```
 
 Create a new key for our network provider to conform to this protocol. Do not forget to mark this definition as private to ensure the exposure while performing dependency injection.
+
 ```
 private struct YourDependencyProviderKey: InjectionKey {
     static var currentValue: YourDependencyProvider = YourDependency()
 }
 ```
+
 We can do this as we’re going to expose the actual key path to use in the property wrapper using an extension on a new type called InjectedValues:
+
 
 ```
 extension InjectedValues {
