@@ -3,18 +3,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Injector",
-    platforms: [
-        .iOS(.v14),
-    ],
+    name: "SwiftInjector",
     products: [
-        .library(name: "Injector",
-                 targets: ["Injector"]),
+        .library(name: "SwiftInjector",
+                 targets: ["SwiftInjector"]),
     ],
     targets: [
-        .target(name: "Injector",
+        .target(name: "SwiftInjector",
                 path: "Sources"),
-        .testTarget(name: "InjectorTests",
-                    dependencies: ["Injector"]),
+        .testTarget(name: "SwiftInjectorTests",
+                    dependencies: ["SwiftInjector"]),
     ]
 )
